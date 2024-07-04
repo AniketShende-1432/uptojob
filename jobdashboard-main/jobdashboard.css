@@ -1030,8 +1030,43 @@ body {
 
 /* For screen widths between 800px and 480px */
 @media only screen and (max-width: 800px) {
+    .nav-bar{
+        justify-content: start;
+        margin-left:15px;
+    }
+    .nav-bar-container{
+        justify-content: start;
+        width:70%;
+    }
+    .nav-links-item a{
+        font-size: 15px;
+        font-weight: bold;
+        > img{
+            height:15px;
+        }
+    }
+    .nav-links-container{
+        width:70%;
+    }
+    .nav-bar-container-options{
+        justify-content: normal;
+    }
+    .search-jobs-container{
+        width:94%;
+        >h1:nth-child(2) {
+            font-size: 50px;
+        }    
+    }
     .join-community-card {
       padding: 0 2rem;
+    }
+    .trending_job_mainhead{
+        font-size:40px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .trending_job1{
+        height:55vh;
     }
     .user-rating-card {
       padding: 1.5rem;
@@ -1185,6 +1220,9 @@ body {
     }
     .join-community-card {
       padding: 0 1rem;
+      > h1 {
+        font-size: 25px;
+      }
     }
     .trending-job-roles-container{
         margin-top:19rem;
