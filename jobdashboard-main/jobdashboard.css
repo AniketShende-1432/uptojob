@@ -342,7 +342,9 @@ body {
         margin-right: 8px;
     }
 }
-
+.search-res-container{
+    display:none;
+}
 .search-jobs-btn {
     outline: none;
     border: 0 solid grey;
@@ -798,7 +800,7 @@ body {
 
 .rating-section {
     min-width: 100vw;
-    height: 50vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     margin: 4rem 0;
@@ -846,7 +848,7 @@ body {
 
 .user-rating-container {
     background-color: rgb(234,248,244);
-    height: 60vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -861,7 +863,7 @@ body {
 }
 
 .user-rating-card {
-    height: 70%;
+    height: 60%;
     width: 500px;
     flex-shrink: 0;
     padding: 2rem;
@@ -1002,6 +1004,9 @@ body {
     font-size: 1.2rem;
     display: none;
 }
+.res-s-container{
+    display: none;
+}
 
 
 /* Media query for small and extra-small devices */
@@ -1070,6 +1075,7 @@ body {
     }
     .user-rating-card {
       padding: 1.5rem;
+      width:100%;
     }
     .user-rating-profile-img {
       height: 80px;
@@ -1090,7 +1096,7 @@ body {
       height: 18px;
     }
     .user-review-text {
-      font-size: 14px;
+      font-size: 18px;
     }
     .employer-card {
       width: 90%;
@@ -1120,7 +1126,7 @@ body {
   @media only screen and (max-width: 480px) {
     .nav-bar{
         justify-content: start;
-        margin-left:1.2rem;
+        padding-left: 2px;
     }
     .nav-bar-container-options {
         display: block;
@@ -1168,6 +1174,13 @@ body {
     .login-buttons-container .employer-btn{
         padding: 0px;
     }
+    .dropdown-container{
+        height:400px;
+        width:400px;
+    }
+    .dropdown-container ul li a{
+        font-size: 15px;
+    }
     .search-jobs-container {
         width: 90%;
         margin-bottom: 2rem;
@@ -1178,6 +1191,12 @@ body {
             line-height: 48px;
             font-size: 32px;
         }  
+    }
+    .search-input-container{
+        display: none;
+    }
+    .search-res-container{
+        display: block;
     }
     .trending_job_container{
         padding:10px;
@@ -1220,15 +1239,47 @@ body {
     }
     .join-community-card {
       padding: 0 1rem;
-      > h1 {
-        font-size: 25px;
+      min-width:75vh;
+      min-height:60vh;
+      align-items: center;
+      > img{
+        height:60px;
+        width:60px;
+        padding:18px;
       }
+      > h1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 25px;
+        text-align: center;
+      }
+      > div{
+        > img{
+            height:20px;
+            width:20px;
+        }
+        margin-top: 5px;
+      }
+    }
+    .rating-section{
+        display: flex;
+        flex-direction: column;
+        height:130vh;
+        margin-top: 0;
+    }
+    .user-rating-container{
+        min-height: 80vh;
+        padding-left: 15px;
+        gap:1rem;
+        padding-bottom: 15px;
     }
     .trending-job-roles-container{
         margin-top:19rem;
     }
     .user-rating-card {
       padding: 1rem;
+      width:100%;
+      height:75%;
     }
     .user-rating-profile-img {
       height: 60px;
@@ -1239,8 +1290,10 @@ body {
     }
     .rating-user-name-text {
       font-size: 15px;
+      margin-left: 18px;
     }
     .rating-stars-container {
+        margin-left: 18px;
       > p {
         font-size: 12px;
       }
@@ -1249,7 +1302,7 @@ body {
       height: 14px;
     }
     .user-review-text {
-      font-size: 12px;
+      font-size: 15px;
     }
     .employer-card {
       width: 95%;
@@ -1272,5 +1325,44 @@ body {
     }
     .employer-img {
       height: 200px;
+    }
+    .res-s-container{
+        position:absolute;
+        top:0;
+        background-color: white;
+        z-index: 99999;
+        width:97%;
+        left:0;
+    }
+    .res-s-heading{
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 10px;
+        border-bottom: solid;
+        > img{
+            position: absolute;
+            top:0;
+            height: 40px;
+            width: 45px;
+            left:40px;
+        }
+        > button{
+            border-radius: 5px;
+            border: none;
+            padding: 2px;
+        }
+    }
+    .res-btn{
+        margin-left:200px;
+    }
+    .res-s-search{
+        height: 90vh;
+        padding:10px;
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        margin-top: 8px;
     }
   }

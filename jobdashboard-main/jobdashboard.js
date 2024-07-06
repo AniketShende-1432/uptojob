@@ -1,5 +1,5 @@
 const searchInputEl = document.querySelector('.search-input-el');
-            
+const searchInputE2 = document.querySelector('.search-input-el2');    
 const infiteScrollData = [
     {
         "imgUrl": "assets/profile.jpg",
@@ -47,6 +47,14 @@ const infiteScrollData = [
     }
 ];
 
+document.querySelector('.search-res-container').addEventListener('click', function() {
+    const toggleDiv = document.querySelector('.res-s-container');
+    toggleDiv.style.display = 'block';
+});
+function closePopup(){
+    const toggleDiv = document.querySelector('.res-s-container');
+    toggleDiv.style.display = 'none';
+};
 
 const infiniteScrollListItems = document.querySelectorAll('.infinite-scroll-list-items');
 
@@ -89,13 +97,16 @@ const constantText = 'Search jobs by '
 
 let index = 0;
 
-function changePlaceholderText() {
+function changePlaceholderText1() {
     searchInputEl.placeholder = constantText + placeholderTextArray[index];
     index = (index + 1) % placeholderTextArray.length;
 }
-
-setInterval(changePlaceholderText, 2000);
-
+function changePlaceholderText2() {
+    searchInputE2.placeholder = constantText + placeholderTextArray[index];
+    index = (index + 1) % placeholderTextArray.length;
+}
+setInterval(changePlaceholderText1, 2000);
+setInterval(changePlaceholderText2, 2000);
 // location input element 
 
 const optionsInputEl = document.querySelector('.options-input-el');

@@ -221,6 +221,10 @@
                 </select> -->
                 <button class="search-jobs-btn">Search Job</button>
             </div>
+            <div class="search-input-container search-res-container">
+                <img src="assets/search.png"/>
+                <input type="search" class="search-input-el2"/>
+            </div>
         </div>
 
         <!-- infinite scroll -->
@@ -545,6 +549,23 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="jobdashboard.js"></script>
+    <div class="res-s-container">
+        <div class="res-s-heading">
+                <button class="cancel" onclick="closePopup()">X</button>
+                <img src="https://uptoskills.com/wp-content/uploads/2023/04/hd-logo-iguru.png" alt="logo"/>
+            <button class="candidate-btn res-btn">Candidate Login</button>
+        </div>
+        <div class="res-s-search">
+            <div class="search-input-container search-res-container">
+                <img src="assets/search.png"/>
+                <input type="search" class="search-input-el2" placeholder="Search job by Company"/>
+            </div>
+            <div class="search-input-container search-res-container">
+                <img src="assets/location.png" class="location-img"/> 
+                <input type="text" class="options-input-el" placeholder="Search for an area or city" />
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
